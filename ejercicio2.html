@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        let intentos = 0;
+        
+        while (true) {
+            const numero = parseInt(prompt("Ingrese un número:"));
+            let mensaje = "";
+            
+            if (numero % 2 === 0) {
+                mensaje = "El número es par";
+            } else {
+                mensaje = "El número es impar"; 
+            }
+            
+            alert(mensaje);
+            
+            const continuar = confirm("¿Desea ingresar otro número?");
+            if (!continuar) {
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

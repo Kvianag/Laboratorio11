@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        let intentos = 0;
+        
+        while (true) {
+            const calificacion = parseInt(prompt("Ingrese una calificación (0-100):"));
+            let mensaje = "";
+            
+            if (calificacion >= 90) {
+                mensaje = "Aprobado con honores";
+            } else if (calificacion >= 70) {
+                mensaje = "Aprobado"; 
+            } else {
+                mensaje = "Reprobado";
+            }
+            
+            alert(mensaje);
+            
+            const continuar = confirm("¿Desea ingresar otra calificación?");
+            if (!continuar) {
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
