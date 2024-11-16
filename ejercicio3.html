@@ -7,26 +7,19 @@
 </head>
 <body>
     <script>
-        while (true) {
-            const monto = parseFloat(prompt("Ingrese el monto de su compra:"));
-            let montoFinal = monto;
-            let mensaje = "";
-            
-            if (monto > 100) {
-                let descuento = monto * 0.10;
-                montoFinal = monto - descuento;
-                mensaje = `Monto original: $${monto.toFixed(2)}\nDescuento aplicado (10%): $${descuento.toFixed(2)}\nMonto final a pagar: $${montoFinal.toFixed(2)}`;
-            } else {
-                mensaje = `Monto a pagar: $${montoFinal.toFixed(2)}\nNo aplica descuento`;
-            }
-            
-            alert(mensaje);
-
-            const continuar = confirm("¿Desea calcular otro descuento?");
-            if (!continuar) {
-                break;
-            }
+        const monto = parseFloat(prompt("Ingrese el monto de su compra:"));
+        let montoFinal = monto;
+        let mensaje = "";
+        
+        if (monto > 100) {
+            let descuento = monto * 0.10;
+            montoFinal = monto - descuento;
+            mensaje = `Monto original: $${monto.toFixed(2)}\nDescuento aplicado (10%): $${descuento.toFixed(2)}\nMonto final a pagar: $${montoFinal.toFixed(2)}`;
+        } else {
+            mensaje = `Monto a pagar: $${montoFinal.toFixed(2)}\nNo aplica descuento`;
         }
+        
+        alert(mensaje);
     </script>
 </body>
 </html>
